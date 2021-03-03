@@ -56,15 +56,15 @@
     var averageAge = (age >= 18) && (age <= 65);
 
     if (age >= 65) {
-      var discountSenior = price * 40 / 100;
-      var priceCutSenior = price - discountSenior;
+      discountSenior = price * 40 / 100;
+      priceCutSenior = price - discountSenior;
       console.log("sei un vecchio", distance, price, age, discountSenior, priceCutSenior)
       document.getElementById('lol').innerHTML = "sei un vecchio";
       document.getElementById('lallero').innerHTML = "il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 40% sarà di € " + priceCutSenior;
 
     } else if (age < 18) {
-      var discountMinor = price * 20 / 100;
-      var priceCutMinor = price - discountMinor;
+      discountMinor = price * 20 / 100;
+      priceCutMinor = price - discountMinor;
       console.log("sei un moccioso", distance, price, age, discountMinor, priceCutMinor)
       document.getElementById('lol').innerHTML = "sei un moccioso";
       document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 20% sarà di € " + priceCutMinor;
