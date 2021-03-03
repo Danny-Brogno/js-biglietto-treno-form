@@ -53,7 +53,6 @@
     var distance = parseInt(prompt("Quanti Km devi percorrere?"));
     var price = distance * 0.21;
     var age = parseInt(prompt("Quanti anni hai?"));
-    var averageAge = (age >= 18) && (age <= 65);
 
     if (age >= 65) {
       discountSenior = price * 40 / 100;
@@ -69,7 +68,7 @@
       document.getElementById('lol').innerHTML = "sei un moccioso";
       document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 20% sarà di € " + priceCutMinor;
 
-    } else if (averageAge) {
+    } else if (averageAge = (age >= 18) && (age <= 65)) {
       console.log("sei normale", distance, price, age)
       document.getElementById('lol').innerHTML = "sei normale";
       document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto è pari a € " + price + " (in quanto non sei così fortunato ad essere minorenne o over 65)";
