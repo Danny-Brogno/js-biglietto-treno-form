@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>La matematica non è un'opinione</title>
+  </head>
+  <body>
+
+
+    <!---__________CSS__________-->
+    <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+      body {
+        background-color: black;
+      }
+
+      #lol {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+      }
+
+      #lallero {
+        text-align: center;
+        color: grey;
+        font-size: 40px;
+      }
+    </style><!---__________END CSS__________-->
+
+
+
+
+
+    <!--__________HTML__________-->
+    <h1 id="lol"></h1>
+    <h2 id="lallero"></h2>
+    <!--__________END HTML__________-->
+
+
+
+
+
+
+    <!---__________JavaScript__________-->
+    <script type="text/javascript">
+
+    var exerciseIncomplete = parseInt(prompt("Quanti esercizi ti rimangono?"));
+    var exerciseComplete = parseInt(prompt("Quanti esercizi hai completato?"));
+    var allExercises = exerciseIncomplete + exerciseComplete;
+
+
+    if (allExercises - exerciseIncomplete) {
+      console.log(exerciseIncomplete);
+      document.getElementById('lol').innerHTML = "Ti mancano " + exerciseIncomplete + " esercizi da completare: SEI UNA CAPRA! STUDIA!";
+    } else if (allExercises == 0) {
+      console.log(exerciseIncomplete);
+      document.getElementById('lol').innerHTML = "Devi sbrigarti a completare almeno un esercizio. IGNORANTE!!! ";
+    } else if ((allExercises = 0) && (exerciseComplete = allExercises)) {
+      console.log(exerciseIncomplete);
+      document.getElementById('lol').innerHTML = "Bravo hai completato tutti gli esercizi. Allora non sei del tutto inutile";
+    }
+
+    </script>
+  </body>
+</html>
