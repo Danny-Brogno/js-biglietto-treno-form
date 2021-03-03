@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>paper scientifico</title>
+  </head>
+  <body>
+
+
+    <!---__________CSS__________-->
+    <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+      body {
+        background-color: black;
+      }
+
+      #lol {
+        text-align: center;
+        color: white;
+        font-size: 100px;
+      }
+    </style><!---__________END CSS__________-->
+
+
+
+
+
+    <!--__________HTML__________-->
+    <h1 id="lol"></h1>
+    <h2 id="lallero"></h2>
+    <!--__________END HTML__________-->
+
+
+
+
+
+
+    <!---__________JavaScript__________-->
+    <script type="text/javascript">
+
+    var distance = parseInt(prompt("Quanti Km devi percorrere?"));
+    var price = distance * 0.21;
+    var age = parseInt(prompt("Quanti anni hai?"));
+    var underAge = age < 18;
+    var overAge = age >= 18;
+    // var discountMinor = price % * 80;
+
+    if (overAge) {
+      console.log("sei un adulto", distance, price, age)
+      document.getElementById('lol').innerHTML = "sei un adulto";
+    } else if (underAge) {
+      console.log("sei un moccioso", distance, price, age)
+      document.getElementById('lol').innerHTML = "sei un moccioso";
+    }
+
+    </script>
+  </body>
+</html>
