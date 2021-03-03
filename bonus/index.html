@@ -55,15 +55,15 @@
     var allExercises = exerciseIncomplete + exerciseComplete;
 
 
-    if (allExercises - exerciseIncomplete) {
+    if (exerciseComplete == 0) {
       console.log(exerciseIncomplete);
-      document.getElementById('lol').innerHTML = "Ti mancano " + exerciseIncomplete + " esercizi da completare: SEI UNA CAPRA! STUDIA!";
-    } else if (allExercises == 0) {
+      document.getElementById('lol').innerHTML = "Devi sbrigarti a completare almeno un esercizio. CAPRA!!! ";
+    } else if (exerciseComplete == exerciseIncomplete) {
       console.log(exerciseIncomplete);
-      document.getElementById('lol').innerHTML = "Devi sbrigarti a completare almeno un esercizio. IGNORANTE!!! ";
-    } else if ((allExercises = 0) && (exerciseComplete = allExercises)) {
+      document.getElementById('lol').innerHTML = "Bravo hai completato tutti gli esercizi. Allora non sei del tutto inutile...";
+    } else if ((exerciseIncomplete == 0) && (exerciseComplete >= 3)) {
       console.log(exerciseIncomplete);
-      document.getElementById('lol').innerHTML = "Bravo hai completato tutti gli esercizi. Allora non sei del tutto inutile";
+      document.getElementById('lol').innerHTML = "Ti mancano " + exerciseIncomplete + " esercizi da completare. STUDIA BRUTTO PERDIGIORNO!!!";
     }
 
     </script>
