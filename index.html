@@ -25,6 +25,12 @@
         color: white;
         font-size: 100px;
       }
+
+      #lallero {
+        text-align: center;
+        color: grey;
+        font-size: 40px;
+      }
     </style><!---__________END CSS__________-->
 
 
@@ -48,15 +54,25 @@
     var price = distance * 0.21;
     var age = parseInt(prompt("Quanti anni hai?"));
     var underAge = age < 18;
-    var overAge = age >= 18;
-    // var discountMinor = price % * 80;
+    var overAge = age >= 65;
+    var averageAge = (age >= 18) && (age <= 65);
+    var discountMinor = price * 20 / 100;
+    var priceCutMinor = price - discountMinor;
+    var discountSenior = price * 40 / 100;
+    var priceCutSenior = price - discountSenior;
 
     if (overAge) {
-      console.log("sei un adulto", distance, price, age)
-      document.getElementById('lol').innerHTML = "sei un adulto";
+      console.log("sei un vecchio", distance, price, age, discountSenior, priceCutSenior)
+      document.getElementById('lol').innerHTML = "sei un vecchio";
+      document.getElementById('lallero').innerHTML = "il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 40% sarà di € " + priceCutSenior;
     } else if (underAge) {
-      console.log("sei un moccioso", distance, price, age)
+      console.log("sei un moccioso", distance, price, age, discountMinor, priceCutMinor)
       document.getElementById('lol').innerHTML = "sei un moccioso";
+      document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 20% sarà di € " + priceCutMinor;
+    } else if (averageAge) {
+      console.log("sei normale", distance, price, age)
+      document.getElementById('lol').innerHTML = "sei normale";
+      document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto è pari a € " + price + " (in quanto non sei così fortunato ad essere minorenne o over 65)";
     }
 
     </script>
