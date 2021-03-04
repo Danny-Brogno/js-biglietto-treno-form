@@ -57,22 +57,25 @@
     if (age >= 65) {
       discountSenior = price * 40 / 100;
       priceCutSenior = price - discountSenior;
-      console.log("sei un vecchio", distance, price, age, discountSenior, priceCutSenior)
-      document.getElementById('lol').innerHTML = "sei un vecchio";
-      document.getElementById('lallero').innerHTML = "il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 40% sarà di € " + priceCutSenior;
+      console.log("Sei un vecchio", distance, price, age, discountSenior, priceCutSenior)
+      var txt1 = "Sei un vecchio";
+      var txt2 = "il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 40% sarà di € " + priceCutSenior;
 
     } else if (age < 18) {
       discountMinor = price * 20 / 100;
       priceCutMinor = price - discountMinor;
-      console.log("sei un moccioso", distance, price, age, discountMinor, priceCutMinor)
-      document.getElementById('lol').innerHTML = "sei un moccioso";
-      document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 20% sarà di € " + priceCutMinor;
+      console.log("Sei un moccioso", distance, price, age, discountMinor, priceCutMinor)
+      var txt1 = "Sei un moccioso";
+      var txt2 = "Il prezzo del tuo biglietto era pari ad € " + price + " ma grazie ad uno sconto del 20% sarà di € " + priceCutMinor;
 
     } else if (averageAge = (age >= 18) && (age <= 65)) {
-      console.log("sei normale", distance, price, age)
-      document.getElementById('lol').innerHTML = "sei normale";
-      document.getElementById('lallero').innerHTML = "Il prezzo del tuo biglietto è pari a € " + price + " (in quanto non sei così fortunato ad essere minorenne o over 65)";
+      console.log("Sei un adulto", distance, price, age)
+      var txt1 = "Sei un adulto";
+      var txt2 = "Il prezzo del tuo biglietto è pari a € " + price + " (in quanto non sei così fortunato ad essere minorenne o over 65)";
     }
+
+    document.getElementById('lol').innerHTML = txt1;
+    document.getElementById('lallero').innerHTML = txt2
 
     </script>
   </body>
